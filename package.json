@@ -4,7 +4,7 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "dev": "bun run --watch src/index.ts",
+    "dev": "bun run --hot src/index.ts",
     "build": "bun build src/index.ts --outdir dist",
     "start": "bun run dist/src/index.js"
   },
@@ -13,5 +13,8 @@
   },
   "peerDependencies": {
     "typescript": "^5"
+  },
+  "dependencies": {
+    "zod": "^4.4.3"
   }
 }
