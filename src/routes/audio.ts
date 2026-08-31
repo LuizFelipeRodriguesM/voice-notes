@@ -1,4 +1,5 @@
-import { isAuthorized, unauthorized } from "../lib/auth.ts";
+import { isAuthorized, unauthorized } from "@auth";
+import { voiceNoteGraph } from '../graph';
 
 const MAX_AUDIO_BYTES = 25 * 1024 * 1024;
 
@@ -44,5 +45,15 @@ export const receiveAudio = async (req: Bun.BunRequest<"/audio">) => {
 
   await Bun.write(path, audio);
 
-  return Response.json({ status: "accepted" }, { status: 202 });
+  try {
+    const result = await voiceNoteGraph.invoke({ audio, filename });
+
+console.log(`[${timestamp}] transcrito="${result.transcript}"`);
+
+    return Response.json({ status: "accepted", result }, { status: 202 });
+  } catch (error) {
+    console.error(`[${timestamp}] POST /audio 502 transcricao falhou`, error);
+
+    return Response.json({ error: "Transcription failed" }, { status: 502 });
+  }
 };
