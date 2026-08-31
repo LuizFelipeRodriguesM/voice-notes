@@ -1,4 +1,4 @@
-import { env } from "./env.ts";
+import { env } from "@env";
 
 const BEARER_PREFIX = "Bearer ";
 

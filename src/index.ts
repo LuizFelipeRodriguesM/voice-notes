@@ -1,4 +1,4 @@
-import { env } from "./lib/env.ts";
+import { env } from "@env";
 import { healthCheck } from "./routes/health-check.ts";
 import { receiveAudio } from './routes/audio.ts';
 
