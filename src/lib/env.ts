@@ -4,6 +4,8 @@ const envSchema = z.object({
   AUDIO_WEBHOOK_SECRET: z.string().min(1),
   PORT: z.coerce.number().default(3333),
   OPENAI_API_KEY: z.string().min(1),
+  NOTION_TOKEN: z.string().min(1),
+  NOTION_DATABASE_ID: z.string().min(1),
 });
 
 const parsed = envSchema.safeParse(Bun.env);
