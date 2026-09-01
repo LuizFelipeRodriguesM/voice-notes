@@ -1,0 +1,34 @@
+Rennan: opa, chegou todo mundo? Marina você tá me ouvindo?
+Marina: tô sim, só deixa eu fechar a porta aqui. Pronto.
+Rennan: beleza. Como foi o fim de semana de vocês?
+Luiz: tranquilo, saí um pouco só. Bora começar que eu tenho outra às cinco.
+Rennan: fechado. Então, o assunto principal é o onboarding, que a gente vem empurrando faz duas semanas. Marina, você olhou os números?
+Marina: olhei. A gente tá perdendo bastante gente na tela de conectar a conta do banco. De cem que começam, uns trinta e dois terminam. E a maior parte cai justamente ali no Pluggy, na hora de escolher o banco.
+Rennan: trinta e dois é bem ruim.
+Marina: é, e olha que a gente já mexeu nessa tela em maio. Eu tenho a planilha com o funil separado por etapa, mando no canal depois.
+Luiz: eu acho que o problema não é a tela, é o momento. A gente pede pra conectar banco antes da pessoa ver qualquer valor no produto. Ela abre o app, não viu nada ainda, e já tem que dar acesso à conta dela.
+Rennan: mas sem conectar o banco o produto não faz nada, né. É meio que o coração.
+Luiz: faz sim, se a gente deixar ela cadastrar um gasto na mão primeiro. Ela vê o gráfico, entende pra que serve, aí a gente pede o banco.
+Rennan: não sei, acho que isso adia demais. A pessoa vai cadastrar um gasto e sumir.
+Marina: eu tô mais pro lado do Luiz, mas também não tenho certeza. Dá pra testar os dois?
+Rennan: dá, mas não agora, a gente não tem volume pra teste A/B decente. Vamos fazer o seguinte: a gente vai com a versão de pular o banco, e revisita isso em duas semanas com número na mão. Se piorar, volta.
+Luiz: fechado.
+Rennan: então tá decidido, o onboarding vai ter a opção de pular a conexão e cadastrar gasto manual. Luiz, isso é muito trabalho?
+Luiz: no app não muito, uns dois dias. O problema é o backend, porque hoje a gente assume que todo usuário tem pelo menos uma conta conectada. Tem consulta que quebra se não tiver.
+Rennan: e como resolve?
+Luiz: eu acho que o certo é criar uma conta virtual, tipo uma carteira, quando o cara pula. Aí o resto do sistema continua achando que existe conta e eu não preciso mexer em dez lugares.
+Marina: isso não vai bagunçar o relatório depois, quando ele conectar o banco de verdade?
+Luiz: vai ter que ter uma migração, mas é uma coisa só, controlada. Melhor do que espalhar if de conta nula pelo código todo.
+Rennan: confio em você nessa. Faz assim.
+Luiz: fecho. Eu consigo entregar o backend até quinta, o app fica pra semana que vem.
+Rennan: perfeito. Marina, você consegue ajustar as telas até quarta pro Luiz já integrar?
+Marina: consigo. Eu vou reaproveitar o fluxo que tá no Figma da versão antiga, só mudando a ordem.
+Rennan: ótimo. Ah, e uma coisa, o pessoal do jurídico mandou email perguntando sobre o texto de consentimento do Open Finance. Alguém sabe responder?
+Luiz: eu não, isso é mais com você.
+Rennan: é, eu vejo. Vou falar com a Camila do escritório essa semana.
+Marina: só uma dúvida, a gente vai comunicar essa mudança pros usuários que já estão na base?
+Rennan: boa pergunta. Não sei ainda, deixa eu pensar. A gente vê na próxima.
+Rennan: então, próxima terça mesmo horário pra ver como ficou? Aí o Luiz já mostra o backend.
+Luiz: pode ser.
+Marina: por mim ok.
+Rennan: valeu pessoal.
