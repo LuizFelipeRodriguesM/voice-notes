@@ -46,14 +46,14 @@ export const receiveAudio = async (req: Bun.BunRequest<"/audio">) => {
   await Bun.write(path, audio);
 
   try {
-    const result = await voiceNoteGraph.invoke({ audio, filename });
+    const { notionUrl } = await voiceNoteGraph.invoke({ audio, filename });
 
-console.log(`[${timestamp}] transcrito="${result.transcript}"`);
+    console.log(`[${timestamp}] POST /audio 202 notion=${notionUrl}`);
 
-    return Response.json({ status: "accepted", result }, { status: 202 });
+    return Response.json({ status: "accepted", url: notionUrl }, { status: 202 });
   } catch (error) {
-    console.error(`[${timestamp}] POST /audio 502 transcricao falhou`, error);
+    console.error(`[${timestamp}] POST /audio 502 processamento falhou`, error);
 
-    return Response.json({ error: "Transcription failed" }, { status: 502 });
+    return Response.json({ error: "Processing failed" }, { status: 502 });
   }
 };
